@@ -13,33 +13,26 @@ export const Hero: React.FC<HeroProps> = () => {
   return (
     <section
       id="hero"
-      className="relative pt-28 pb-14 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24 overflow-hidden bg-[#090d16] text-slate-100 border-b border-slate-800/80"
+      className="relative pt-28 pb-14 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#090d16] text-slate-100 border-b border-slate-800/80"
     >
-      {/* Cinematic Developer Workspace Scene with Twilight Mountain Horizon (Desktop Widescreen) */}
+      {/* Cinematic Dark Twilight Mountain Landscape Background */}
       <div
-        className="hidden lg:block absolute inset-0 bg-cover bg-[position:right_bottom] pointer-events-none select-none opacity-90 transition-opacity duration-1000"
-        style={{ backgroundImage: "url('/hero-developer-workspace.webp')" }}
-      />
-
-      {/* Atmospheric Mountain Twilight Background (Mobile & Tablet) */}
-      <div
-        className="lg:hidden absolute inset-0 bg-cover bg-bottom pointer-events-none select-none opacity-80 transition-opacity duration-1000"
+        className="absolute inset-0 bg-cover bg-bottom pointer-events-none select-none opacity-80 sm:opacity-90 transition-opacity duration-1000"
         style={{ backgroundImage: "url('/hero-mountain-bg.png')" }}
       />
 
       {/* Smooth vignette dissolve gradients to blend seamlessly into navbar and next sections */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#090d16] via-transparent to-[#0b0f17] pointer-events-none" />
-      <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-[#090d16] via-[#090d16]/75 to-transparent pointer-events-none" />
-      <div className="lg:hidden absolute inset-0 bg-gradient-to-r from-[#090d16]/85 via-[#090d16]/40 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#090d16]/85 via-[#090d16]/35 to-transparent pointer-events-none" />
 
       {/* Atmospheric ambient glows */}
-      <div className="absolute top-1/4 right-1/4 w-[350px] sm:w-[500px] h-[300px] sm:h-[400px] bg-purple-600/15 blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-1/4 right-1/4 w-[350px] sm:w-[500px] h-[300px] sm:h-[400px] bg-purple-600/10 blur-[130px] pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 left-10 w-[300px] sm:w-[450px] h-[300px] bg-indigo-600/10 blur-[120px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center min-h-[580px] lg:min-h-[620px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          {/* Left Column: Heading, Bio, Stats & CTAs */}
+          {/* Left Column: Heading, Bio, Stats & CTAs (Exact Original Content) */}
           <div className="lg:col-span-7 space-y-6 sm:space-y-7">
             {/* Minimal Kicker */}
             <div className="flex items-center gap-3">
@@ -61,20 +54,6 @@ export const Hero: React.FC<HeroProps> = () => {
                 </span>
                 <span className="block text-slate-200">based in India.</span>
               </h1>
-            </div>
-
-            {/* Mobile / Tablet Workspace Showcase Card (Instant visual impact on small screens) */}
-            <div className="lg:hidden relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border border-white/10 ring-1 ring-white/5 shadow-2xl group bg-slate-900/60 my-4">
-              <Image
-                src="/hero-developer-scene.webp"
-                alt="Vandit Jain - Software Engineer"
-                fill
-                priority
-                sizes="(max-width: 1023px) 100vw, 440px"
-                className="object-cover object-right sm:object-center filter contrast-[1.02] brightness-[0.98]"
-              />
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10 pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#090d16]/80 via-transparent to-transparent pointer-events-none" />
             </div>
 
             {/* Summary description */}
@@ -138,8 +117,26 @@ export const Hero: React.FC<HeroProps> = () => {
             </div>
           </div>
 
-          {/* Right Column: Desktop Spacer (lets the panoramic developer workspace shine through uninterrupted) */}
-          <div className="hidden lg:block lg:col-span-5 relative w-full h-[540px] pointer-events-none" />
+          {/* Right Column: Floating Rounded Card with Suit Mountain Portrait */}
+          <div className="lg:col-span-5 relative flex items-center justify-center lg:justify-end w-full">
+            {/* Outer ambient glow aura */}
+            <div className="absolute -inset-2 bg-gradient-to-tr from-purple-600/25 via-indigo-600/20 to-cyan-500/10 rounded-[40px] blur-2xl -z-10" />
+
+            {/* Smooth Floating Card as seen in reference photo */}
+            <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[440px] aspect-[4/5] rounded-[32px] sm:rounded-[36px] overflow-hidden border border-white/10 ring-1 ring-white/5 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)] group backdrop-blur-sm bg-slate-900/40">
+              <Image
+                src="/hero-portrait-perfect.png"
+                alt="Vandit Jain"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 440px"
+                className="object-cover object-center filter contrast-[1.02] brightness-[0.98] transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+
+              {/* Inner glass highlight */}
+              <div className="absolute inset-0 rounded-[32px] sm:rounded-[36px] ring-1 ring-inset ring-white/10 pointer-events-none" />
+            </div>
+          </div>
 
         </div>
       </div>
