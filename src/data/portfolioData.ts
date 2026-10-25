@@ -87,10 +87,10 @@ export const PROJECTS: Project[] = [
     title: "Catena Clearing",
     tagline: "High-Volume Telematics Integration & Normalization Platform",
     type: "Enterprise Telematics & Data Platform",
-    role: "Backend Architect & Lead Go Engineer",
+    role: "Technical Product Specialist",
     statusBadge: "Live Enterprise Platform",
     description:
-      "Architected a scalable Go data pipeline normalizing high-volume telematics data from 190+ telematics service providers (TSPs) into unified real-time telemetry streams.",
+      "Architected a scalable Go data pipeline normalizing high-volume telematics data from 300+ telematics service providers (TSPs) into unified real-time telemetry streams.",
     longDescription:
       "Catena Clearing connects disparate commercial fleet telematics systems into a standardized clearinghouse. Commercial telematics providers emit data in wildly differing formats, intervals, and payload structures. This platform normalizes high-velocity IoT streams into standardized JSON schemas with strict validation, enabling automated detention tracking, mileage auditing, and fleet intelligence at scale.",
     technologies: [
@@ -107,20 +107,20 @@ export const PROJECTS: Project[] = [
       "Claude / AI SDLC",
     ],
     metrics: [
-      { label: "Providers Integrated", value: "190+" },
-      { label: "Processing Latency", value: "< 25ms" },
+      { label: "Providers Integrated", value: "300+" },
+      { label: "Customer Requests & Bug Resolution", value: "High-Velocity Rollouts" },
       { label: "Schema Validation", value: "100% Strict" },
       { label: "Architecture", value: "Go Microservices" },
     ],
     challenges: [
-      "Normalizing disparate, unpredictable telemetry packets across 190+ telematics providers without dropping throughput.",
+      "Normalizing disparate, unpredictable telemetry packets across 300+ telematics providers without dropping throughput.",
       "Preventing ingestion lag during peak fleet operation hours when millions of GPS and engine status events arrive simultaneously.",
       "Rapidly prototyping and validating standardized JSON schemas using AI-assisted engineering tools to handle changing upstream vendor specs.",
     ],
     architectureOverview:
       "Raw TSP Webhooks & Socket Feeds → High-Concurrency Ingestion Workers (Go) → JSON Schema Validation Engine → Kafka Distributed Event Stream → Telematics Intelligence & Detention Service → PostgreSQL / Redis Cache → Client Dashboards & Webhook Dispatchers.",
     pipelineSteps: [
-      "Raw Telemetry Ingestion (190+ TSPs)",
+      "Raw Telemetry Ingestion (300+ TSPs)",
       "Worker Pool De-duplication & Sanitization",
       "Dynamic JSON Schema Normalizer",
       "Kafka Event Bus Partitioning",

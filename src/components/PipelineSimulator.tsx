@@ -27,7 +27,7 @@ export const PipelineSimulator: React.FC = () => {
     {
       timestamp: "12:30:14.102",
       stage: "Raw Ingestion",
-      message: "Received 190+ TSP provider telemetry feed",
+      message: "Received 300+ TSP provider telemetry feed",
       latency: "1.2ms",
       status: "success",
     },
@@ -147,7 +147,7 @@ export const PipelineSimulator: React.FC = () => {
   const steps = [
     {
       title: "1. TSP Ingest",
-      desc: "190+ Providers Feed",
+      desc: "300+ Providers Feed",
       icon: <Radio className="w-4 h-4 text-emerald-400" />,
     },
     {
@@ -186,7 +186,7 @@ export const PipelineSimulator: React.FC = () => {
               Telematics Data Pipeline Simulator
             </h2>
             <p className="text-slate-400 text-sm sm:text-base max-w-2xl">
-              Simulate an incoming telematics packet from 190+ providers and observe 
+              Simulate an incoming telematics packet from 300+ providers and observe 
               the Go worker pool, JSON schema normalizer, Kafka bus, and persistent cache in action.
             </p>
           </div>
@@ -289,7 +289,7 @@ export const PipelineSimulator: React.FC = () => {
               </div>
               <div className="p-3 rounded-xl bg-slate-950/40 border border-slate-800">
                 <div className="text-xs text-slate-400">Pipeline Providers</div>
-                <div className="text-lg font-mono font-bold text-cyan-400">190+ TSPs</div>
+                <div className="text-lg font-mono font-bold text-cyan-400">300+ TSPs</div>
               </div>
             </div>
           </div>

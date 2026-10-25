@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowRight, Sparkles, Code2, MapPin, Layers, Rocket } from "lucide-react";
+import { ArrowRight, Code2, MapPin, Layers, Rocket } from "lucide-react";
 import { PERSONAL_INFO } from "@/data/portfolioData";
 
 interface HeroProps {
@@ -11,20 +11,32 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = () => {
   return (
-    <section id="hero" className="relative pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-36 lg:pb-24 overflow-hidden bg-[#0b0f17] text-slate-100 border-b border-slate-800/80">
-      {/* Soft atmospheric gradient glows */}
-      <div className="absolute top-0 right-1/4 w-[350px] sm:w-[600px] h-[300px] sm:h-[500px] bg-purple-600/10 blur-[100px] sm:blur-[140px] pointer-events-none -z-10" />
-      <div className="absolute top-1/3 left-5 sm:left-10 w-[300px] sm:w-[450px] h-[300px] sm:h-[400px] bg-indigo-600/10 blur-[90px] sm:blur-[130px] pointer-events-none -z-10" />
-      <div className="absolute -bottom-10 right-5 sm:right-10 w-[250px] sm:w-[350px] h-[250px] sm:h-[300px] bg-cyan-600/10 blur-[80px] sm:blur-[120px] pointer-events-none -z-10" />
+    <section
+      id="hero"
+      className="relative pt-28 pb-14 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#090d16] text-slate-100 border-b border-slate-800/80"
+    >
+      {/* Cinematic Dark Twilight Mountain Landscape Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-bottom pointer-events-none select-none opacity-80 sm:opacity-90 transition-opacity duration-1000"
+        style={{ backgroundImage: "url('/hero-mountain-bg.png')" }}
+      />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      {/* Smooth vignette dissolve gradients to blend seamlessly into navbar and next sections */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#090d16] via-transparent to-[#0b0f17] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#090d16]/85 via-[#090d16]/35 to-transparent pointer-events-none" />
+
+      {/* Atmospheric ambient glows */}
+      <div className="absolute top-1/4 right-1/4 w-[350px] sm:w-[500px] h-[300px] sm:h-[400px] bg-purple-600/10 blur-[130px] pointer-events-none -z-10" />
+      <div className="absolute bottom-1/4 left-10 w-[300px] sm:w-[450px] h-[300px] bg-indigo-600/10 blur-[120px] pointer-events-none -z-10" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          {/* Left Column: Heading, Bio, Stats & CTAs */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-7 z-20">
+          {/* Left Column: Heading, Bio, Stats & CTAs (Exact Original Content) */}
+          <div className="lg:col-span-7 space-y-6 sm:space-y-7">
             {/* Minimal Kicker */}
             <div className="flex items-center gap-3">
-              <span className="h-[2px] w-7 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full"></span>
+              <span className="h-[2px] w-7 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full" />
               <span className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400 font-mono">
                 About Me
               </span>
@@ -105,37 +117,24 @@ export const Hero: React.FC<HeroProps> = () => {
             </div>
           </div>
 
-          {/* Right Column: Elongated Natural Suit Portrait */}
-          <div className="lg:col-span-5 relative flex items-center justify-center w-full">
-            {/* Outer ambient glow */}
-            <div className="absolute -inset-2 bg-gradient-to-tr from-purple-600/25 via-indigo-600/20 to-cyan-500/20 rounded-[2rem] blur-xl sm:blur-2xl -z-10" />
+          {/* Right Column: Floating Rounded Card with Suit Mountain Portrait */}
+          <div className="lg:col-span-5 relative flex items-center justify-center lg:justify-end w-full">
+            {/* Outer ambient glow aura */}
+            <div className="absolute -inset-2 bg-gradient-to-tr from-purple-600/25 via-indigo-600/20 to-cyan-500/10 rounded-[40px] blur-2xl -z-10" />
 
-            <div className="relative w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[440px] h-[460px] sm:h-[540px] lg:h-[630px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/60 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-[#0b0f17] shadow-[0_20px_50px_rgba(0,0,0,0.8)] group">
-              {/* Natural Photograph in tailored suit */}
+            {/* Smooth Floating Card as seen in reference photo */}
+            <div className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[440px] aspect-[4/5] rounded-[32px] sm:rounded-[36px] overflow-hidden border border-white/10 ring-1 ring-white/5 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)] group backdrop-blur-sm bg-slate-900/40">
               <Image
-                src="/vandit-suit-portrait.png"
+                src="/hero-portrait-perfect.png"
                 alt="Vandit Jain"
-                width={1000}
-                height={1220}
+                fill
                 priority
-                className="w-full h-full object-cover object-top filter contrast-[1.03] brightness-[0.98] transition-transform duration-700 group-hover:scale-[1.02]"
+                sizes="(max-width: 768px) 100vw, 440px"
+                className="object-cover object-center filter contrast-[1.02] brightness-[0.98] transition-transform duration-700 group-hover:scale-[1.02]"
               />
 
-              {/* Bottom smooth dark dissolve gradient */}
-              <div
-                aria-hidden="true"
-                className="absolute inset-x-0 bottom-0 h-32 sm:h-36 bg-gradient-to-t from-[#0b0f17] via-[#0b0f17]/70 to-transparent pointer-events-none"
-              />
-
-              {/* Bottom one-liner */}
-              <div className="absolute bottom-3 sm:bottom-4 inset-x-3 sm:inset-x-4 p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-slate-950/85 backdrop-blur-md border border-slate-800/80 shadow-xl flex items-center gap-2.5 sm:gap-3">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-purple-950/80 border border-purple-800/60 flex items-center justify-center shrink-0 text-purple-400">
-                  <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                </div>
-                <p className="text-[11px] sm:text-xs text-slate-200 leading-snug sm:leading-relaxed font-normal">
-                  <strong className="text-white font-semibold">Curious problem solver &amp; continuous learner</strong> — turning complex challenges into resilient, scalable systems.
-                </p>
-              </div>
+              {/* Inner glass highlight */}
+              <div className="absolute inset-0 rounded-[32px] sm:rounded-[36px] ring-1 ring-inset ring-white/10 pointer-events-none" />
             </div>
           </div>
 

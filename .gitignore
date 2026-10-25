@@ -20,7 +20,9 @@
 # production
 /build
 
-# misc
+# local agents / mcp secrets
+.agents/
+
 .DS_Store
 *.pem
 

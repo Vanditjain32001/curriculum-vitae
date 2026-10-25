@@ -125,7 +125,7 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({ isOpen, onClose })
         output = (
           <div className="space-y-1 text-xs text-slate-300">
             <p className="text-emerald-400 font-bold">Catena Clearing — Telematics Integration Platform</p>
-            <p>190+ TSP provider feeds normalized into strict JSON schemas via high-concurrency Go workers.</p>
+            <p>300+ TSP provider feeds normalized into strict JSON schemas via high-concurrency Go workers.</p>
             <p className="text-cyan-300">Website: https://www.catenaclearing.io/</p>
           </div>
         );

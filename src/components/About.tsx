@@ -92,7 +92,7 @@ export const About: React.FC = () => {
               <ul className="space-y-2 sm:space-y-2.5 text-xs text-slate-300 font-mono">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-3.5 h-3.5 text-purple-400 mt-0.5 shrink-0" />
-                  <span>Rapid JSON schema synthesis &amp; validation for 190+ external telematics vendors.</span>
+                  <span>Rapid JSON schema synthesis &amp; validation for 300+ external telematics vendors.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-3.5 h-3.5 text-purple-400 mt-0.5 shrink-0" />

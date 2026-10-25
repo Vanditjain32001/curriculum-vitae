@@ -7,14 +7,14 @@ A modern, high-performance portfolio website engineered for **Vandit Jain** — 
 ## 🚀 Key Highlights & Features
 
 - **Backend Engineering Command Center (Hero):**
-  - Live impact KPI metric cards (3.5+ Years Experience, 190+ TSP Providers, -20% Latency, +15% Query Efficiency).
+  - Live impact KPI metric cards (3.5+ Years Experience, 300+ TSP Providers, -20% Latency, +15% Query Efficiency).
   - Code preview window showcasing Go concurrent worker pool and strict JSON schema normalization logic.
 - **Interactive Telematics Pipeline Simulator (`#simulator`):**
-  - Interactive IoT event simulator showing live telematics packet ingestion across 190+ providers through Go worker pools, schema normalization, Kafka bus, and Postgres/Redis caching with real-time latency traces.
+  - Interactive IoT event simulator showing live telematics packet ingestion across 300+ providers through Go worker pools, schema normalization, Kafka bus, and Postgres/Redis caching with real-time latency traces.
 - **Interactive Developer CLI Terminal (`>_ CLI`):**
   - Monospace command-line emulator accessible from the navbar, hero, or footer with commands: `help`, `bio`, `skills`, `projects`, `catena`, `panasonic`, `precium`, `fitpass`, `contact`, `resume`, `clear`, and `exit`.
 - **Featured Systems & Deep-Dive Case Studies:**
-  - **Catena Clearing:** 190+ telematics provider normalization platform in Go.
+  - **Catena Clearing:** 300+ telematics provider normalization platform in Go.
   - **Panasonic E-Mobility:** National EV rental & fleet management backend (dual-app ecosystem, operator dashboard, 20% latency reduction).
   - **Precium:** Dynamic pricing engine & revenue optimization tool.
   - **FITPASS:** HealthTech infrastructure with real-time computer vision workout tracking and nutrition consultation modules.
